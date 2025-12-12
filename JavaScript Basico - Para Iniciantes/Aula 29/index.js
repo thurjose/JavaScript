@@ -23,9 +23,15 @@ const alunos =  ["Luiz", "Pedro", "Maria"];
 // console.log(alunos.length) 
 // para saber o tamanho do array
 
+
+
+
 // alunos.push("Fabricio")
-// alunos.push("Cleopatra")
+// alunos.push("Cleopatra")            // MAIS USADO EM GRANDES MAIORIAS DOS CASOS!!!!!!!!!!!!!!!!!
 // adiciona ao final
+
+
+
 
 // alunos[4] = "Mario" 
 //adiciona tambem so que em posicao exata (se nao houver valor em [3] ele vai pular e definir valor no 4) (a empty item)
@@ -60,4 +66,7 @@ const alunos =  ["Luiz", "Pedro", "Maria"];
 // console.log(alunos instanceof Array)
 //se true e array       else nao e array
 
-console.log(alunos)
+// console.log(typeof alunos);
+// mostra o tipo do array (OBJETO)
+
+console.log(alunos);
