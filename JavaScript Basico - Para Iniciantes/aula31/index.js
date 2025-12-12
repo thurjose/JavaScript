@@ -41,3 +41,7 @@ console.log(pessoa1)
 console.log(`Nome: ${pessoa1.nome}`)
 console.log(`idade: ${pessoa1.idade}`)
 console.log(`cor: ${pessoa1.cor}`)
+
+
+
+//Pesquisar mais sobre "this"
