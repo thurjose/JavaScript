@@ -1,0 +1,111 @@
+# Guia Git: Do Zero ao Intermediário
+
+## 1\. Configuração Inicial (Só uma vez)
+
+*Serve para o Git saber quem está fazendo as alterações.*
+
+```bash
+# Define seu nome (aparece no histórico)
+git config --global user.name "Seu Nome"
+
+# Define seu email (deve ser o mesmo do GitHub/GitLab)
+git config --global user.email "seu.email@exemplo.com"
+```
+
+## 2\. Começando um Projeto
+
+*Você tem duas opções: começar do zero ou baixar um existente.*
+
+```bash
+# OPÇÃO A: Começar uma pasta nova do zero
+git init
+
+# OPÇÃO B: Baixar um projeto que já existe (ex: do GitHub)
+git clone https://link-do-repositorio.git
+```
+
+## 3\. O Ciclo Diário (Salvar Arquivos)
+
+*É aqui que você passa 90% do tempo. Pense nisso como "Salvar o jogo".*
+
+```bash
+# 1. Veja o que você mudou (arquivos vermelhos = não salvos)
+git status
+
+# 2. Prepare os arquivos para salvar (o famoso "Staging")
+git add .           # Adiciona TODOS os arquivos modificados
+git add arquivo.js  # Adiciona SÓ um arquivo específico
+
+# 3. Salve de fato (Cria um ponto na história)
+git commit -m "Explique aqui o que você fez"
+```
+
+> **Dica:** O `git add` coloca os arquivos numa "caixa", o `git commit` fecha e lacra a caixa.
+
+## 4\. Sincronizando com a Internet (GitHub/GitLab)
+
+*Mandar seu código para a nuvem ou baixar o código dos colegas.*
+
+```bash
+# Envia seus commits locais para o servidor
+git push origin main
+
+# Baixa as atualizações que outros fizeram para o seu PC
+git pull origin main
+```
+
+## 5\. Trabalhando com Branches (Básico-Médio)
+
+*Branches (ramos) servem para criar uma cópia do código para testar coisas novas sem quebrar o projeto principal.*
+
+```bash
+# Cria uma branch nova e já muda para ela
+git checkout -b nome-da-nova-feature
+
+# Volta para a branch principal (main)
+git checkout main
+
+# Lista todas as branches que existem
+git branch
+```
+
+## 6\. Juntando Código (Merge)
+
+*Depois que você terminou sua tarefa na branch, precisa juntar ela na principal.*
+
+```bash
+# 1. Primeiro, volte para a principal
+git checkout main
+
+# 2. Puxe atualizações para garantir que está tudo em dia
+git pull origin main
+
+# 3. Funde a sua branch na principal
+git merge nome-da-nova-feature
+```
+
+## 7\. Comandos de "Salva-Vidas" (Desfazer e Limpar)
+
+*Errou ou precisa limpar a bagunça? Use estes.*
+
+```bash
+# Mostra o histórico resumido (hash e mensagem)
+git log --oneline
+
+# Desfaz alterações em um arquivo (volta como estava no último commit)
+git restore nome-do-arquivo
+
+# Guarda sua bagunça temporariamente para limpar depois (Stash)
+git stash        # Guarda tudo
+git stash pop    # Devolve o que você guardou
+```
+
+-----
+
+### Resumo Visual do Fluxo:
+
+1.  Escreve código.
+2.  `git status` (Confere).
+3.  `git add .` (Prepara).
+4.  `git commit -m "..."` (Salva local).
+5.  `git push` (Envia pra nuvem).
