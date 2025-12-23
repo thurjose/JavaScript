@@ -24,18 +24,18 @@ Operadores Logicos
 
 
 
-//                                 OR
-// const bolso = 0
-// const fora = 1 // 0 = nao tem 1 = tem
-// const haveMoney = bolso > 0
-// if (fora === 1){
-//     sunDay = true
-// }else {
-//     sunDay = false
-// };
-// console.log(`Tenho dinheiro? ${haveMoney}, Esta sol? ${sunDay}`);
-// console.log(haveMoney || sunDay);
+                                OR
+const bolso = 0
+const fora = 1 // 0 = nao tem 1 = tem
+const haveMoney = bolso > 0
+if (fora === 1){
+    sunDay = true
+}else {
+    sunDay = false
+};
+console.log(`Tenho dinheiro? ${haveMoney}, Esta sol? ${sunDay}`);
+console.log(haveMoney || sunDay);
 
 
-//                              !
-// console.log(!true); // INVERTE O VALOR
+                             !
+console.log(!true); // INVERTE O VALOR
