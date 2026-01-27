@@ -109,7 +109,7 @@ git stash pop    # Devolve o que você guardou
 3.  `git add .` (Prepara).
 4.  `git commit -m "..."` (Salva local).
 5.  `git push origin main` (Envia pra nuvem).
-6. 
-```
+5.  `git push` (Envia pra nuvem).
+6.  `git pull origin main` (Sincroniza com os dados atuais do GIT)
 
 End.
